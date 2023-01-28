@@ -1,0 +1,24 @@
+<form onsubmit="movetoStorage(event)">
+    <label>Name</label>
+    <input type="text" name="details" required>
+      <label>Email</label>
+      <input type="email" name="eaddres" required>
+      <button>click</button>
+
+
+</form>
+
+<script>
+
+function movetoStorage(event){
+
+event.preventDefault()
+
+const name = event.target.details.value
+const email = event.target.eaddres.value
+
+localStorage.setItem("Name",name)
+localStorage.setItem("Email",email)
+}
+
+</script>
